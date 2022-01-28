@@ -3,6 +3,7 @@ version: "3.4"
 services:
   app:
     build: .
+    container_name: wolt_task_app_container
     restart: unless-stopped
     volumes:
       - ./:/app

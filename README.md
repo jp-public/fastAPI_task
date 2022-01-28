@@ -1,5 +1,10 @@
-# delivery fee-api
+# delivery fee-API
 
-Requirements to run locally on port 8000: Docker.
+Requirements to run: Docker & Docker Compose.
 
-To start api: ```docker-compose up --build```  
+To start API: ```docker-compose up --build```  
+
+To run tests:
+First ```docker exec -it wolt_task_app_container sh``` 
+and then run ```python -m pytest ./app/tests/test_main.py```
+in container. 
