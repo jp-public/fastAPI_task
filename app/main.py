@@ -60,6 +60,6 @@ async def calculate_fee(details:  DeliveryDetails):
         fee_amount = min(MAX_FEE, distance_fee + items_fee + min_order_fee)
         order_time = parser.parse(details.time)
         if order_time.strftime('%A') == "Friday" and datetime.time(19) >= order_time.time() >= datetime.time(15):
-            fee_amount = (min(MAX_FEE, fee_amount * SURGE_FACTOR))
+            fee_amount = (min(MAX_FEE, int(fee_amount * SURGE_FACTOR)))
     fee = {"delivery_fee": fee_amount}
     return fee
