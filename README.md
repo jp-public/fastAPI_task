@@ -1,5 +1,7 @@
 # delivery fee-API
 
+HTTP API that returns delivery fee from delivery details.
+
 Requirements to run: Docker & Docker Compose.
 
 To start API: ```docker-compose up --build```  
